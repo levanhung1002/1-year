@@ -56,7 +56,7 @@ Star.prototype.update = function() {
     this.draw()
 
     //When ball hits bottom of screen
-    if(this.y + this.radius + this.velocity.y > canvas.height - groundHeight){
+    if(this.y + this.radius + this.velocity.y > canvas.height){
         this.velocity.y = -this.velocity.y * this.friction
         this.shatter()
     }
@@ -176,7 +176,7 @@ function animate() {
     if(flag) creatMountainRange(2, canvas.height * 0.6, '#2B3843')
     if(flag) creatMountainRange(3, canvas.height * 0.4, '#26333E')
     c.fillStyle = '#182028'
-    c.fillRect(0, canvas.height - groundHeight, canvas.width, groundHeight)
+    // c.fillRect(0, canvas.height - groundHeight, canvas.width, groundHeight)
     stars.forEach((star, index) => {
         star.update();
         if(star.radius == 0){
