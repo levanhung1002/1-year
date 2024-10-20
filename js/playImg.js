@@ -1,4 +1,5 @@
 var btn = document.getElementById("heartTxt");
+var loopImg = document.getElementById("loopy1");
 btn.style.opacity = 0;
 var btnVal = 0;
 
@@ -25,6 +26,7 @@ function play() {
         clearInterval(showImageInterval);
     }
     flag = 1 - flag;
+    loopImg.style.opacity = flag;
     document.getElementById("typeDiv").style.opacity = flag;
     document.getElementById("imgTxt").style.opacity = 1 - flag;
     if (t === 0) {
